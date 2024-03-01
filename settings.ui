@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface domain="firefox-pip@bennypowers.com">
+  <requires lib="gtk" version="4.0"/>
+    <template class="Settings" parent="AdwPreferencesPage" id="preferences_page">
+        <property name="name">settings</property>
+        <property name="title" translatable="yes">Settings</property>
+        <property name="icon-name">general-symbolic</property>
+
+        <child>
+            <object class="AdwPreferencesGroup">
+                <property name="title" translatable="yes">General</property>
+
+                <child>
+                    <object class="AdwActionRow">
+                        <property name="title" translatable="yes">Always on top</property>
+                        <property name="activatable-widget">always_on_top</property>
+                        <child>
+                        <object class="GtkSwitch" id="always_on_top">
+                        </object>
+                        </child>
+                    </object>
+                </child>
+
+                <child>
+                    <object class="AdwActionRow">
+                        <property name="title" translatable="yes">Always on visible workspace</property>
+                        <property name="activatable-widget">always_on_visible_workspace</property>
+                        <child>
+                        <object class="GtkSwitch" id="always_on_visible_workspace">
+                        </object>
+                        </child>
+                    </object>
+                </child>
+
+            </object>
+        </child>
+
+        <child>
+            <object class="AdwPreferencesGroup">
+                <property name="title" translatable="yes">Position</property>
+                <property name="subtitle" translatable="yes">Set initial position of a PIP window</property>
+                <child>
+                    <object class="AdwActionRow">
+                        <property name="title" translatable="yes">Remember position</property>
+                        <property name="activatable-widget">remember_position</property>
+                        <child>
+                        <object class="GtkSwitch" id="remember_position">
+                        </object>
+                        </child>
+                    </object>
+                </child>
+
+                <child>
+                    <object class="AdwActionRow">
+                        <property name="title" translatable="yes">Use custom position</property>
+                        <property name="activatable-widget">use_custom_position</property>
+                        <child>
+                        <object class="GtkSwitch" id="use_custom_position">
+                        </object>
+                        </child>
+                    </object>
+                </child>
+
+            </object>
+        </child>
+
+    </template>
+</interface>
